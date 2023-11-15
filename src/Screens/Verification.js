@@ -1,13 +1,9 @@
-// Verification.js
-
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
-const Verification = () => {
+const Verification = ({navigation}) => {
   const [verificationCode, setVerificationCode] = useState('');
-  const navigation = useNavigation();
 
   const handleContinuePress = () => {
   };
@@ -49,7 +45,7 @@ const Verification = () => {
         </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.continueButton}>
+      <TouchableOpacity style={styles.continueButton} onPress={() => navigation.navigate("SelectLocation") }>
         <Ionicons name="chevron-forward-outline" size={24} color="#FFF" />
       </TouchableOpacity>
     </View>

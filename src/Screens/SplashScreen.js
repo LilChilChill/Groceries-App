@@ -4,10 +4,9 @@ import { Icon } from 'react-native-elements';
 
 const SplashScreen = ({ navigation }) => {
   useEffect(() => {
-    // Thực hiện các công việc cần thiết ở đây, chẳng hạn như kiểm tra trạng thái đăng nhập và điều hướng tới màn hình chính.
     setTimeout(() => {
-      navigation.replace('Main'); // Chuyển hướng tới màn hình chính (đổi 'Main' thành tên màn hình chính của bạn).
-    }, 5000); // Thời gian hiển thị splash screen (2 giây trong trường hợp này).
+      navigation.replace('Main'); 
+    }, 5000); 
   }, []);
 
   return (

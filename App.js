@@ -7,6 +7,12 @@ import Main from './src/Screens/Main';
 import Signin from './src/Screens/Signin';
 import PhoneNumberInput from './src/Screens/PhoneNumberInput';
 import Verification from './src/Screens/Verification';
+import LocationScreen from "./src/Screens/LocationScreen"
+import Login from './src/Screens/Login';
+import SignUp from './src/Screens/SignUp';
+import BottomNavigator from './src/Screens/Main/BottomNavigation';
+import Product from './src/Screens/Main/Product';
+
 
 const Stack = createStackNavigator();
 
@@ -37,8 +43,12 @@ export default function App() {
         <Stack.Screen name="Sign in" component={Signin} />
         <Stack.Screen name="PhoneNumberInput" component={PhoneNumberInput } />
         <Stack.Screen name="Verification" component={Verification } />
+        <Stack.Screen name="SelectLocation" component={LocationScreen } />
+        <Stack.Screen name="Login" component={Login } />
+        <Stack.Screen name="Sign Up" component={SignUp } />
+        <Stack.Screen name="HomeScreen" style={{backgroundColor: "#EAEDF4"}} component={BottomNavigator}/>
+        <Stack.Screen name="Product" component={Product } />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-
